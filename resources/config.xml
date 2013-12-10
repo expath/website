@@ -1,0 +1,5 @@
+<config>
+   <org-spec-dir>file:/.../expath-website/org-specs/</org-spec-dir>
+   <w3c-spec-dir>file:/.../expath-website/expath-cg/specs/</w3c-spec-dir>
+   <web-content-dir>file:/.../expath-website/web-content/pages/</web-content-dir>
+</config>

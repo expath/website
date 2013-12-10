@@ -1,0 +1,122 @@
+<webapp xmlns="http://expath.org/ns/webapp/descriptor"
+        xmlns:app="http://expath.org/ns/website"
+        name="http://expath.org/website"
+        abbrev="expath"
+        version="0.5.0pre1">
+
+   <title>EXPath website</title>
+
+   <resource pattern="/style/.+.css"  media-type="text/css"/>
+   <resource pattern="/js/.+.js"      media-type="text/javascript"/>
+   <resource pattern="/images/.+.png" media-type="image/png"/>
+   <resource pattern="/images/.+.jpg" media-type="image/jpeg"/>
+   <resource pattern="/images/.+.gif" media-type="image/gif"/>
+
+   <!--
+       Matches '/wiki/*', to failover in case Apache is not configured.
+   -->
+   <servlet name="wiki">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:wiki-servlet"/>
+      <url pattern="/wiki/.*"/>
+   </servlet>
+
+   <!--
+       The search tool.
+   -->
+   <servlet name="search">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:search-servlet"/>
+      <url pattern="/search"/>
+   </servlet>
+
+   <!--
+       The page listing all the specs.
+   -->
+   <servlet name="specs-page">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:specs-page-servlet"/>
+      <url pattern="/specs"/>
+   </servlet>
+
+   <!--
+       Serve a specification.
+   -->
+   <servlet name="spec">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:spec-servlet"/>
+      <!-- TODO: Actually, '/editor' is mutually exclusive with a date. -->
+      <url pattern="/spec/([-a-z]+)(/editor)?(/(20[0-9]{6}|1.0))?(/diff)?(.xml)?">
+         <match group="1" name="spec"/>
+         <match group="2" name="editor"/>
+         <match group="4" name="version"/>
+         <match group="5" name="diff"/>
+         <match group="6" name="xml"/>
+      </url>
+      <!--
+	 To resolve the above TODO, add the ability to have several URL elements
+	 for the same SERVLET, binding several URL patterns to the same servlet.
+	 In this case, one with an optional date (but no editor), and one with
+	 a mandatory editor.
+      <url pattern="/spec/([-a-z]+)(/20[0-9]{6})?(/diff)?(.xml)?">
+         <match group="1" name="spec"/>
+         <match group="2" name="date"/>
+         <match group="3" name="diff"/>
+         <match group="4" name="xml"/>
+      </url>
+      <url pattern="/spec/([-a-z]+)/(editor)(/diff)?(.xml)?">
+         <match group="1" name="spec"/>
+         <match group="2" name="editor"/>
+         <match group="3" name="diff"/>
+         <match group="4" name="xml"/>
+      </url>
+      -->
+   </servlet>
+
+   <!--
+      Redirects to the latest draft (even when a 1.0 has been published).
+   -->
+   <servlet name="latest">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:latest-servlet"/>
+      <url pattern="/spec/([-a-z]+)/latest">
+         <match group="1" name="spec"/>
+      </url>
+   </servlet>
+
+   <!--
+       A simple, plain page.
+   -->
+   <servlet name="page">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:page-servlet"/>
+      <url pattern="/([-a-z0-9/]+)?">
+         <match group="1" name="page"/>
+      </url>
+   </servlet>
+
+   <!--
+       The atom news feed and the oXygen addon site descriptor.
+   -->
+   <servlet name="atom">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:xml-resource"/>
+      <url pattern="/(atom|oxygen/addon-site).xml">
+         <match group="1" name="resource"/>
+      </url>
+   </servlet>
+
+   <!--
+       The old addresses for the pages, ending in '.html'.
+       
+       TODO: Should be different for specs and pages.
+   -->
+   <servlet name="old-page">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:old-page-servlet"/>
+      <url pattern="/([-a-z0-9/]+).html">
+         <match group="1" name="page"/>
+      </url>
+   </servlet>
+
+</webapp>

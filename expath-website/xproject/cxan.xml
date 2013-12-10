@@ -1,0 +1,14 @@
+<package xmlns="http://cxan.org/ns/package" id="expath-website">
+
+   <abstract>
+      The EXPath website itself.
+   </abstract>
+
+   <author id="fgeorges">Florent Georges</author>
+
+   <category id="webapps">Webapps</category>
+
+   <tag>expath</tag>
+   <tag>webapp</tag>
+
+</package>

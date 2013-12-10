@@ -1,0 +1,4 @@
+WEBSITE=/.../expath-website
+*/5 * * * * ( cd $WEBSITE/org-specs/   ; svn update )
+*/5 * * * * ( cd $WEBSITE/expath-cg/   ; git pull )
+*/5 * * * * ( cd $WEBSITE/web-content/ ; git pull )

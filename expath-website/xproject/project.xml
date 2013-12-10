@@ -1,0 +1,10 @@
+<project xmlns="http://expath.org/ns/project"
+         name="http://expath.org/website"
+         abbrev="expath-website"
+         version="0.5.0pre1">
+
+   <title>EXPath website</title>
+
+   <home>http://expath.org/</home>
+
+</project>

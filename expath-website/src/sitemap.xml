@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sitemap>
+
+   <!--
+      TODO: We should be able to skip the rsrc/@href, to say: "just copy
+      it to the current href dir, with the same filename as the original
+      resource file...)
+   -->
+
+   <!-- allow a kind of glob (like *.xml -> *.html) -->
+   <!--page src="about.xml"     href="about.html"     menu="main"/-->
+   <!--page src="contact.xml"   href="contact.html"   menu="main"/-->
+   <page src="credits.xml"   href="credits.html"   menu="main"/>
+   <page src="faq.xml"       href="faq.html"       menu="main"/>
+   <page src="index.xml"     href="index.html"     menu="main"/>
+   <page src="lists.xml"     href="lists.html"     menu="main"/>
+   <page src="modules.xml"   href="modules.html"   menu="main"/>
+   <page src="news.xml"      href="news.html"      menu="main"/>
+   <page src="resources.xml" href="resources.html" menu="main"/>
+   <page src="map.xml"       href="map.html"       menu="main"/>
+   <rsrc src="atom.xml"      href="atom.xml"/>
+   <rsrc name="misc/fgeorges-expath-examples.zip" href="fgeorges-expath-examples.zip"/>
+
+   <dir base="../style/" href="style/">
+      <rsrc src="default.css"       href="default.css"/>
+      <rsrc src="serial-oxygen.css" href="serial-oxygen.css"/>
+   </dir>
+
+   <dir base="../images/" href="images/" copy="true">
+      <exclude name=".svn"/>
+   </dir>
+
+   <!--
+      TODO: Find a way to delegate to a sub-website.xml file !!!
+
+      A website.xml file would be create in each module, so each module con
+      contain its own webpages, reference its own resources, specifications,
+      etc.  At the very least, allow using a variable at the beginning of
+      @src...
+   -->
+   <dir base="modules/" href="modules/">
+      <rsrc name="http-client/http-client.html"          href="http-client.html"/>
+      <rsrc name="http-client/http-client.xml"           href="http-client.xml"/>
+      <rsrc name="http-client/http-client-20090413.html" href="http-client-20090413.html"/>
+      <rsrc name="http-client/http-client-20090413.xml"  href="http-client-20090413.xml"/>
+      <rsrc name="http-client/http-client-20090302.html" href="http-client-20090302.html"/>
+      <rsrc name="http-client/http-client-20090302.xml"  href="http-client-20090302.xml"/>
+      <rsrc name="http-client/http-client-20090112.html" href="http-client-20090112.html"/>
+      <rsrc name="pkg/pkg.html"          href="pkg.html"/>
+      <rsrc name="pkg/pkg.xml"           href="pkg.xml"/>
+      <rsrc name="pkg/pkg-20090901.html" href="pkg-20090901.html"/>
+      <rsrc name="pkg/pkg-20090901.xml"  href="pkg-20090901.xml"/>
+      <rsrc name="pkg/pkg-20091118.html" href="pkg-20091118.html"/>
+      <rsrc name="pkg/pkg-20091118.xml"  href="pkg-20091118.xml"/>
+      <rsrc name="zip/zip.html"          href="zip.html"/>
+      <rsrc name="zip/zip.xml"           href="zip.xml"/>
+      <rsrc name="zip/zip-20090526.html" href="zip-20090526.html"/>
+      <rsrc name="zip/zip-20090526.xml"  href="zip-20090526.xml"/>
+      <dir base="http-client/" href="http-client/" release="http-client/">
+         <!-- pages -->
+         <page src="index.xml"    href="index.html"   menu="hc"/>
+         <page src="implems.xml"  href="implems.html" menu="hc"/>
+         <page src="samples.xml"  href="samples.html" menu="hc"/>
+         <!-- packages -->
+         <rsrc name="expath-http-client-exist-0.1.xar"        href="expath-http-client-exist-0.1.xar"/>
+         <rsrc name="expath-http-client-marklogic-0.1.tar.gz" href="expath-http-client-marklogic-0.1.tar.gz"/>
+         <rsrc name="expath-http-client-marklogic-0.1.zip"    href="expath-http-client-marklogic-0.1.zip"/>
+         <rsrc name="expath-http-client-saxon-0.3.tar.gz"     href="expath-http-client-saxon-0.3.tar.gz"/>
+         <rsrc name="expath-http-client-saxon-0.3.zip"        href="expath-http-client-saxon-0.3.zip"/>
+         <rsrc name="expath-http-client-saxon-0.4.xar"        href="expath-http-client-saxon-0.4.xar"/>
+      </dir>
+      <dir base="pkg/" href="pkg/" release="pkg/">
+         <!-- pages -->
+         <page src="index.xml"   href="index.html"   menu="pkg"/>
+         <page src="implems.xml" href="implems.html" menu="pkg"/>
+         <!-- repo -->
+         <rsrc name="expath-pkg-repo-0.1.jar"  href="expath-pkg-repo-0.1.jar"/>
+         <!-- calabash -->
+         <rsrc name="calabash-expath-r477.jar"    href="calabash-expath-r477.jar"/>
+         <rsrc name="expath-pkg-calabash-0.1.jar" href="expath-pkg-repo-0.1.jar"/>
+         <rsrc name="expath-pkg-calabash-0.1.sh"  href="expath-pkg-repo-0.1.sh"/>
+         <!-- exist -->
+         <rsrc name="expath-pkg-exist-0.1.jar" href="expath-pkg-exist-0.1.jar"/>
+         <!-- saxon -->
+         <rsrc name="expath-pkg-saxon-0.1.jar" href="expath-pkg-saxon-0.1.jar"/>
+         <rsrc name="expath-pkg-saxon-0.1.sh"  href="expath-pkg-saxon-0.1.sh"/>
+         <rsrc name="expath-pkg-saxon-0.2.jar" href="expath-pkg-saxon-0.2.jar"/>
+         <rsrc name="expath-pkg-saxon-0.2.sh"  href="expath-pkg-saxon-0.2.sh"/>
+      </dir>
+      <dir base="webapp/" href="webapp/" release="webapp/">
+         <!-- pages -->
+         <page src="index.xml"    href="index.html"   menu="webapp"/>
+         <page src="implems.xml"  href="implems.html" menu="webapp"/>
+         <page src="samples.xml"  href="samples.html" menu="webapp"/>
+      </dir>
+      <dir base="xproject/" href="xproject/" release="xproject/">
+         <!-- pages -->
+         <page src="index.xml"  href="index.html"  menu="xproj"/>
+         <page src="oxygen.xml" href="oxygen.html" menu="xproj"/>
+      </dir>
+      <dir base="zip/" href="zip/" release="zip/">
+         <!-- pages -->
+         <page src="index.xml"    href="index.html"   menu="zip"/>
+         <page src="implems.xml"  href="implems.html" menu="zip"/>
+         <page src="samples.xml"  href="samples.html" menu="zip"/>
+         <!-- packages -->
+         <rsrc name="expath-zip-saxon-0.1.xar" href="expath-zip-saxon-0.1.xar"/>
+      </dir>
+   </dir>
+
+   <!--dir href="tmp/">
+      <rsrc src="../../misc/2009-balisage/examples.zip"                     href="balisage-examples.zip"/>
+      <rsrc src="../../misc/2009-balisage/presentation/balisage-expath.pdf" href="balisage-expath.pdf"/>
+      <rsrc prj="zip" src="saxon/build/expath-zip-saxon-0.1.pkg.zip" href="expath-zip-saxon-0.1.pkg.zip"/>
+   </dir-->
+
+   <menu name="main">
+      <item name="index"     href="."         title="EXPath Home">Home</item>
+      <item name="news"      href="news"      title="EXPath News">News</item>
+      <item name="faq"       href="faq"       title="EXPath FAQ">FAQ</item>
+      <item name="lists"     href="lists"     title="EXPath Mailing Lists">Lists</item>
+      <item name="modules"   href="modules"   title="EXPath Modules">Modules</item>
+      <item name="specs"     href="specs"     title="EXPath Specifications">Specs</item>
+      <item name="resources" href="resources" title="EXPath Resources">Resources</item>
+      <item name="map"       href="map"       title="EXPath Website Map">Map</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="oxygen">
+      <item name="nop"     href=".."           title="EXPath Home">Home</item>
+      <item name="news"    href="../news"      title="EXPath News">News</item>
+      <item name="faq"     href="../faq"       title="EXPath FAQ">FAQ</item>
+      <item name="lists"   href="../lists"     title="EXPath Mailing Lists">Lists</item>
+      <item name="modules" href="../modules"   title="EXPath Modules">Modules</item>
+      <item name="specs"   href="../specs"     title="EXPath Specifications">Specs</item>
+      <item name="index"   href="../resources" title="EXPath Resources">Resources</item>
+      <item name="map"     href="../map"       title="EXPath Website Map">Map</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="binary">
+      <item name="parent"  href="../../modules"     title="Modules">[ ../Modules ]</item>
+      <item name="index"   href="."                 title="EXPath Binary Home">Binary</item>
+      <item name="implems" href="implems"           title="EXPath Binary Implems">Implementations</item>
+      <item name="samples" href="samples"           title="EXPath Binary Samples">Samples</item>
+      <item name="spec"    href="../../spec/binary" title="EXPath Binary Spec">Specification</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/Binary" title="EXPath Binary Wiki">Wiki</item>
+   </menu>
+
+   <menu name="file">
+      <item name="parent"  href="../../modules"   title="Modules">[ ../Modules ]</item>
+      <item name="index"   href="."               title="EXPath File Home">File</item>
+      <item name="implems" href="implems"         title="EXPath File Implems">Implementations</item>
+      <item name="samples" href="samples"         title="EXPath File Samples">Samples</item>
+      <item name="spec"    href="../../spec/file" title="EXPath File Spec">Specification</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/File" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="geo">
+      <item name="parent"  href="../../modules"  title="Modules">[ ../Modules ]</item>
+      <item name="index"   href="."              title="EXPath Geo Home">Geo</item>
+      <item name="implems" href="implems"        title="EXPath Geo Implems">Implementations</item>
+      <!--item name="samples" href="samples"        title="EXPath Geo Samples">Samples</item-->
+      <item name="spec"    href="../../spec/geo" title="EXPath Geo Spec">Specification</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/Geo" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="hc">
+      <item name="parent"  href="../../modules"          title="Modules">[ ../Modules ]</item>
+      <item name="index"   href="."                      title="EXPath HTTP Client Home">HTTP Client</item>
+      <item name="implems" href="implems"                title="EXPath HTTP Client Implems">Implementations</item>
+      <item name="samples" href="samples"                title="EXPath HTTP Client Samples">Samples</item>
+      <item name="spec"    href="../../spec/http-client" title="EXPath HTTP Client Spec">Specification</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/HttpClient" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="pkg">
+      <item name="parent"  href="../../modules"        title="Modules">[ ../Modules ]</item>
+      <item name="index"   href="."                    title="EXPath Packaging Home">Packaging</item>
+      <item name="implems" href="implems"              title="EXPath Packaging Implems">Implementations</item>
+      <item name="spec"    href="../../spec/pkg"       title="EXPath Packaging Spec">Specification</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/Packaging" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="webapp">
+      <item name="parent"  href="../../modules"     title="Modules">[ ../Modules ]</item>
+      <item name="index"   href="."                 title="EXPath Webapp Home">Webapp</item>
+      <item name="implems" href="implems"           title="EXPath Webapp Implems">Implementations</item>
+      <item name="samples" href="samples"           title="EXPath Webapp Samples">Samples</item>
+      <item name="spec"    href="../../spec/webapp" title="EXPath Webapp Spec">Specification</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/Webapp" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="xproj">
+      <item name="parent" href="../../modules"       title="Modules">[ ../Modules ]</item>
+      <item name="index"  href="."                   title="XProject Home">XProject</item>
+      <item name="oxygen" href="oxygen"              title="XProject plugin for oXygen">oXygen Plugin</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/XProject" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+   <menu name="zip">
+      <item name="parent"  href="../../modules"  title="Modules">[ ../Modules ]</item>
+      <item name="index"   href="."              title="EXPath ZIP Home">ZIP</item>
+      <item name="implems" href="implems"        title="EXPath ZIP Implems">Implementations</item>
+      <item name="samples" href="samples"        title="EXPath ZIP Samples">Samples</item>
+      <item name="spec"    href="../../spec/zip" title="EXPath ZIP Spec">Specification</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/Zip" title="EXPath Wiki">Wiki</item>
+   </menu>
+
+</sitemap>

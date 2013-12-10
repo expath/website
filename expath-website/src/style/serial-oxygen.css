@@ -1,0 +1,105 @@
+/* from xquery-mode */
+.xml-serial-string, .string {
+  color: #993300;
+}
+.xml-serial-keyword, .keyword {
+  color: #0000FF;
+}
+.xml-serial-variable-name, .variable-name {
+  color: #646464;
+}
+.xml-serial-function-name, .function-name {
+  color: #FA6400;
+}
+.xml-serial-constant, .constant {
+  color: #000096;
+}
+/* "normal" tags */
+.xml-serial-open-tag, .nxml-open-tag {
+  color: #000096;
+}
+.xml-serial-close-tag, .nxml-close-tag {
+  color: #000096;
+}
+.xml-serial-tag-delimiter, .nxml-tag-delimiter {
+  color: #000096;
+}
+.xml-serial-tag-slash, .nxml-tag-slash {
+  color: #000096;
+}
+.xml-serial-element-colon, .nxml-element-colon {
+  color: #000096;
+}
+.xml-serial-element-local-name, .nxml-element-local-name {
+  color: #000096;
+}
+.xml-serial-element-prefix, .nxml-element-prefix {
+  color: #000096;
+}
+/* xsl tags */
+.xml-serial-xsl-open-tag, .nxml-xsl-open-tag {
+  color: #0064C8;
+}
+.xml-serial-xsl-close-tag, .nxml-xsl-close-tag {
+  color: #0064C8;
+}
+.xml-serial-xsl-tag-delimiter, .nxml-xsl-tag-delimiter {
+  color: #0064C8;
+}
+.xml-serial-xsl-tag-slash, .nxml-xsl-tag-slash {
+  color: #0064C8;
+}
+.xml-serial-xsl-element-colon, .nxml-xsl-element-colon {
+  color: #0064C8;
+}
+.xml-serial-xsl-element-local-name, .nxml-xsl-element-local-name {
+  color: #0064C8;
+}
+.xml-serial-xsl-element-prefix, .nxml-xsl-element-prefix {
+  color: #0064C8;
+}
+.xml-serial-text, .nxml-text {
+  color: #000000;
+}
+.xml-serial-attribute-colon, .nxml-attribute-colon {
+  color: #F5844C;
+}
+.xml-serial-attribute-local-name, .nxml-attribute-local-name {
+  color: #F5844C;
+}
+.xml-serial-attribute-prefix, .nxml-attribute-prefix {
+  color: #F5844C;
+}
+.xml-serial-attribute-value, .nxml-attribute-value {
+  color: #993300;
+}
+.xml-serial-attribute-value-delimiter, .nxml-attribute-value-delimiter {
+  color: #993300;
+}
+.xml-serial-comment-content, .nxml-comment-content {
+  color: #006400;
+}
+.xml-serial-comment-delimiter, .nxml-comment-delimiter {
+  color: #006400;
+}
+.xml-serial-xmlns-colon, .nxml-namespace-attribute-colon {
+  color: #F5844C;
+}
+.xml-serial-xmlns-prefix, .nxml-namespace-attribute-prefix {
+  color: #F5844C;
+}
+.xml-serial-xmlns-value, .nxml-namespace-attribute-value {
+  color: #993300;
+}
+.xml-serial-xmlns-value-delimiter, .nxml-namespace-attribute-value-delimiter {
+  color: #993300;
+}
+.xml-serial-xmlns-xmlns, .nxml-namespace-attribute-xmlns {
+  color: #F5844C;
+}
+.xml-serial-pi-delimiter, .nxml-processing-instruction-delimiter {
+  color: #8B26C9;
+}
+.xml-serial-pi-target, .nxml-processing-instruction-target {
+  color: #8B26C9;
+}

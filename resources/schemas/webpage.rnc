@@ -1,0 +1,94 @@
+default namespace = ""
+
+start = webpage
+
+webpage = 
+  element webpage {
+    attribute menu { xsd:NCName },
+    attribute root { text }?,
+    title,
+    (divider | section)+,
+    primary*,
+    secondary*
+  }
+
+title = element title { inline+ }
+
+divider = element divider { empty }
+
+section =
+  element section {
+    attribute id { xsd:NCName }?,
+    title,
+    element image {
+      attribute alt { text },
+      attribute src { text }
+    }?,
+    blocks+
+  }
+
+primary =
+  element primary {
+    attribute id { xsd:NCName }?,
+    title,
+    element details { text }?,
+    blocks+
+  }
+
+secondary =
+  element secondary {
+    attribute box { xsd:boolean }?,
+    attribute id { xsd:NCName }?,
+    title?,
+    blocks+
+  }
+
+para =
+  element para {
+    (inline | sample)+
+  }
+
+image =
+  element image {
+    attribute src { text },
+    attribute alt { text }
+  }
+
+listelem =
+  element list {
+    element item { inline+ }+
+  }
+
+sample =
+  element sample {
+    attribute kind { xsd:NCName }?,
+    (attribute href { xsd:NCName }
+     | text)
+  }
+
+youtube =
+  element youtube {
+    attribute video { xsd:NCName }
+  }
+
+slideshare =
+  element slideshare {
+    attribute doc { text }
+  }
+
+inline =
+  (text
+   | element code { text }
+   | element link {
+       attribute href { xsd:anyURI },
+       inline+
+     }
+   | element emph { inline+ }
+   | element bold { inline+ })
+ 
+ blocks =
+  (para
+  | image
+  | listelem
+  | youtube
+  | slideshare)
