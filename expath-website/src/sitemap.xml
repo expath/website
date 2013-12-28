@@ -125,6 +125,20 @@
       <item name="resources" href="resources" title="EXPath Resources">Resources</item>
       <item name="map"       href="map"       title="EXPath Website Map">Map</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+      <item name="download"  href="files"     title="EXPath Downloads">Download</item>
+   </menu>
+
+   <menu name="download">
+      <item name="nop"     href=".."           title="EXPath Home">Home</item>
+      <item name="news"    href="../news"      title="EXPath News">News</item>
+      <item name="faq"     href="../faq"       title="EXPath FAQ">FAQ</item>
+      <item name="lists"   href="../lists"     title="EXPath Mailing Lists">Lists</item>
+      <item name="modules" href="../modules"   title="EXPath Modules">Modules</item>
+      <item name="specs"   href="../specs"     title="EXPath Specifications">Specs</item>
+      <item name="index"   href="../resources" title="EXPath Resources">Resources</item>
+      <item name="map"     href="../map"       title="EXPath Website Map">Map</item>
+      <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="oxygen">
@@ -137,6 +151,7 @@
       <item name="index"   href="../resources" title="EXPath Resources">Resources</item>
       <item name="map"     href="../map"       title="EXPath Website Map">Map</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="binary">
@@ -146,6 +161,7 @@
       <item name="samples" href="samples"           title="EXPath Binary Samples">Samples</item>
       <item name="spec"    href="../../spec/binary" title="EXPath Binary Spec">Specification</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/Binary" title="EXPath Binary Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="file">
@@ -155,6 +171,7 @@
       <item name="samples" href="samples"         title="EXPath File Samples">Samples</item>
       <item name="spec"    href="../../spec/file" title="EXPath File Spec">Specification</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/File" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="geo">
@@ -164,6 +181,7 @@
       <!--item name="samples" href="samples"        title="EXPath Geo Samples">Samples</item-->
       <item name="spec"    href="../../spec/geo" title="EXPath Geo Spec">Specification</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/Geo" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="hc">
@@ -173,6 +191,7 @@
       <item name="samples" href="samples"                title="EXPath HTTP Client Samples">Samples</item>
       <item name="spec"    href="../../spec/http-client" title="EXPath HTTP Client Spec">Specification</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/HttpClient" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="pkg">
@@ -181,6 +200,7 @@
       <item name="implems" href="implems"              title="EXPath Packaging Implems">Implementations</item>
       <item name="spec"    href="../../spec/pkg"       title="EXPath Packaging Spec">Specification</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/Packaging" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="webapp">
@@ -190,6 +210,7 @@
       <item name="samples" href="samples"           title="EXPath Webapp Samples">Samples</item>
       <item name="spec"    href="../../spec/webapp" title="EXPath Webapp Spec">Specification</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/Webapp" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="xproj">
@@ -197,6 +218,7 @@
       <item name="index"  href="."                   title="XProject Home">XProject</item>
       <item name="oxygen" href="oxygen"              title="XProject plugin for oXygen">oXygen Plugin</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/XProject" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="zip">
@@ -206,6 +228,7 @@
       <item name="samples" href="samples"        title="EXPath ZIP Samples">Samples</item>
       <item name="spec"    href="../../spec/zip" title="EXPath ZIP Spec">Specification</item>
       <item name="wiki" href="http://wiki.expath.org/wiki/Zip" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
 </sitemap>

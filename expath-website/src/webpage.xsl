@@ -108,7 +108,7 @@
                      <xsl:text>EXPath website version </xsl:text>
                      <xsl:value-of select="$version"/>
                      <xsl:text> (revision #</xsl:text>
-                     <a href="http://code.google.com/p/expath/source/browse/trunk?r={ $revision }#trunk%2Fwebsite%2Fsrc">
+                     <a href="http://github.com/expath/website/commit/{ $revision }">
                         <xsl:value-of select="$revision"/>
                      </a>
                      <xsl:text>)</xsl:text>

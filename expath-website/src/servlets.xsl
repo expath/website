@@ -15,7 +15,130 @@
 
    <xsl:param name="menus" as="element(menu)+" select="doc('sitemap.xml')/sitemap/menu"/>
 
-   <xsl:param name="config-file" select="'../../../expath-website/config.xml'"/>
+   <!--
+       Display the download area page, from the files repository.
+   -->
+   <xsl:function name="app:download-area-servlet">
+      <!-- the http request -->
+      <xsl:param name="request" as="element(web:request)"/>
+      <!-- the list of files -->
+      <xsl:variable name="list" select="
+         doc(resolve-uri('files.xml', web:config-param('web-files-dir')))/files"/>
+      <web:response status="200" message="Ok">
+         <web:body content-type="text/html" method="xhtml"/>
+      </web:response>
+      <xsl:variable name="doc" as="element(webpage)">
+         <webpage menu="main" xmlns="">
+            <title>EXPath - Download</title>
+            <section>
+               <title>Download</title>
+               <para>Here are the latest version of the available components.  For
+                  earlier versions, please check individual download areas.</para>
+               <divider/>
+               <xsl:apply-templates select="$list/area"/>
+            </section>
+         </webpage>
+      </xsl:variable>
+      <xsl:apply-templates select="$doc">
+         <xsl:with-param name="page-name" select="'download'"/>
+      </xsl:apply-templates>
+   </xsl:function>
+
+   <xsl:template match="area[@dir]">
+      <primary xmlns="">
+         <title>
+            <xsl:value-of select="name"/>
+         </title>
+         <para>
+            <xsl:text>See the dedicated download </xsl:text>
+            <link href="files/{ @dir }">
+               <xsl:text>area</xsl:text>
+            </link>
+            <xsl:text> for all versions.</xsl:text>
+         </para>
+         <list>
+            <xsl:for-each select="component">
+               <item>
+                  <xsl:value-of select="name"/>
+                  <xsl:text>: </xsl:text>
+                  <link href="file/{ ../@dir }/{ file/@href }">
+                     <xsl:value-of select="file/@href"/>
+                  </link>
+               </item>
+            </xsl:for-each>
+         </list>
+      </primary>
+   </xsl:template>
+
+   <!--
+       Display a specific download area page, from the files repository.
+   -->
+   <xsl:function name="app:download-page-servlet">
+      <!-- the http request -->
+      <xsl:param name="request" as="element(web:request)"/>
+      <!-- the name of the specific area -->
+      <xsl:variable name="area-name" as="xs:string" select="
+          $request/web:path/web:match[@name eq 'area']"/>
+      <!-- the list of files -->
+      <xsl:variable name="area" select="
+         doc(resolve-uri(concat($area-name, '/__files.xml'), web:config-param('web-files-dir')))/area"/>
+      <web:response status="200" message="Ok">
+         <web:body content-type="text/html" method="xhtml"/>
+      </web:response>
+      <xsl:variable name="doc" as="element(webpage)">
+         <webpage menu="download" xmlns="" root="..">
+            <title>EXPath - Download</title>
+            <section>
+               <title>
+                  <xsl:text>Download: </xsl:text>
+                  <xsl:value-of select="$area/name"/>
+               </title>
+               <xsl:apply-templates select="$area/component"/>
+            </section>
+         </webpage>
+      </xsl:variable>
+      <xsl:apply-templates select="$doc">
+         <xsl:with-param name="page-name" select="'download'"/>
+      </xsl:apply-templates>
+   </xsl:function>
+
+   <xsl:template match="component">
+      <primary xmlns="">
+         <title>
+            <xsl:value-of select="name"/>
+         </title>
+         <list>
+            <xsl:for-each select="file">
+               <item>
+                  <link href="../file/{ ../../@dir }/{ @href }">
+                     <xsl:value-of select="@href"/>
+                  </link>
+               </item>
+            </xsl:for-each>
+         </list>
+      </primary>
+   </xsl:template>
+
+   <!--
+       Return a file straight from the web-files repository.
+   -->
+   <xsl:function name="app:download-file-servlet">
+      <!-- the http request -->
+      <xsl:param name="request" as="element(web:request)"/>
+      <!-- the url param 'resource' -->
+      <xsl:variable name="area" select="$request/web:path/web:match[@name eq 'area']"/>
+      <xsl:variable name="file" select="$request/web:path/web:match[@name eq 'file']"/>
+      <!-- the resolved file for the resource -->
+      <xsl:variable name="href" select="
+         resolve-uri(
+           concat($area, '/', $file),
+           web:config-param('web-files-dir'))"/>
+      <!-- TODO: Is there a way to test the file exists? -->
+      <!-- TODO: Find a way to set the proper content-type...  In __files.xml, maybe? -->
+      <web:response status="200" message="Ok">
+         <web:body content-type="application/octet-stream" src="{ $href }"/>
+      </web:response>
+   </xsl:function>
 
    <!--
        Display a page from the page repository, which must be a 'webpage' XML document.
@@ -93,7 +216,7 @@
       <xsl:sequence select="
          resolve-uri(
            concat($page, '.xml'),
-	   doc($config-file)/config/web-content-dir)"/>
+           web:config-param('web-content-dir'))"/>
    </xsl:function>
 
    <!--
@@ -313,8 +436,7 @@
 
    <xsl:function name="app:get-spec-list" as="element(specs)">
       <xsl:param name="param" as="xs:string"/>
-      <xsl:variable name="dir" as="xs:string" select="
-         doc($config-file)/config/*[local-name(.) eq $param]"/>
+      <xsl:variable name="dir" as="xs:string" select="web:config-param($param)"/>
       <xsl:sequence select="
          doc(resolve-uri('list.xml', $dir))/specs"/>
    </xsl:function>

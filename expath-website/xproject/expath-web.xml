@@ -1,10 +1,35 @@
-<webapp xmlns="http://expath.org/ns/webapp/descriptor"
+<webapp xmlns="http://expath.org/ns/webapp"
         xmlns:app="http://expath.org/ns/website"
         name="http://expath.org/website"
         abbrev="expath"
-        version="0.5.0pre1">
+        version="0.5.0pre2">
+
+   <!--
+      TODO: Create a proper error handler!
+   -->
 
    <title>EXPath website</title>
+
+   <config-param id="org-spec-dir">
+      <name>Legacy specification directory</name>
+      <desc>The directory in the EXPath.org source repository where to find the specifications (and
+         containing the file "list.xml"). See https://code.google.com/p/expath/.</desc>
+      <uri>../../../expath-website/org-specs/</uri>
+   </config-param>
+
+   <config-param id="w3c-spec-dir">
+      <name>W3C specification directory</name>
+      <desc>The directory in the W3C EXPath CG source repository where to find the specifications
+         (and containing the file "list.xml"). See https://github.com/expath/expath-cg/.</desc>
+      <uri>../../../expath-website/expath-cg/specs/</uri>
+   </config-param>
+
+   <config-param id="web-content-dir">
+      <name>Web content directory</name>
+      <desc>The directory in the EXPath Web Content source repository where to find the pages
+         content. See https://github.com/expath/web-content/.</desc>
+      <uri>../../../expath-website/web-content/pages/</uri>
+   </config-param>
 
    <resource pattern="/style/.+.css"  media-type="text/css"/>
    <resource pattern="/js/.+.js"      media-type="text/javascript"/>
@@ -54,10 +79,10 @@
          <match group="6" name="xml"/>
       </url>
       <!--
-	 To resolve the above TODO, add the ability to have several URL elements
-	 for the same SERVLET, binding several URL patterns to the same servlet.
-	 In this case, one with an optional date (but no editor), and one with
-	 a mandatory editor.
+         To resolve the above TODO, add the ability to have several URL elements
+         for the same SERVLET, binding several URL patterns to the same servlet.
+         In this case, one with an optional date (but no editor), and one with
+         a mandatory editor.
       <url pattern="/spec/([-a-z]+)(/20[0-9]{6})?(/diff)?(.xml)?">
          <match group="1" name="spec"/>
          <match group="2" name="date"/>
@@ -81,6 +106,38 @@
             function="app:latest-servlet"/>
       <url pattern="/spec/([-a-z]+)/latest">
          <match group="1" name="spec"/>
+      </url>
+   </servlet>
+
+   <!--
+       The generated download area.
+   -->
+   <servlet name="download">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:download-area-servlet"/>
+      <url pattern="/files"/>
+   </servlet>
+
+   <!--
+       A specific download area page.
+   -->
+   <servlet name="area">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:download-page-servlet"/>
+      <url pattern="/files/([-a-z0-9]+)">
+         <match group="1" name="area"/>
+      </url>
+   </servlet>
+
+   <!--
+       Downloading a file straight from the web-files repository.
+   -->
+   <servlet name="file">
+      <xslt uri="http://expath.org/ns/website/servlets.xsl"
+            function="app:download-file-servlet"/>
+      <url pattern="/file/([-a-z0-9]+)/([^/]+)">
+         <match group="1" name="area"/>
+         <match group="2" name="file"/>
       </url>
    </servlet>
 
