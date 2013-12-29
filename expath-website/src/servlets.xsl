@@ -295,6 +295,7 @@
                         <xsl:variable name="file-re" select="concat('^', $spec-name, '-[0-9]{8}.xml$')"/>
                         <!-- TODO: Display in reverse order... (newest on top) -->
                         <xsl:for-each select="revision">
+                           <xsl:sort select="position()" order="descending"/>
                            <item>
                               <link href="spec/{ $spec-name }/{ @version }">
                                  <xsl:value-of select="concat($spec-name, '/', @version)"/>
@@ -303,10 +304,10 @@
                         </xsl:for-each>
                         <xsl:for-each select="editor">
                            <item>
+                              <xsl:text>editor's </xsl:text>
                               <link href="spec/{ $spec-name }/editor">
-                                 <xsl:text>editor</xsl:text>
+                                 <xsl:text>draft</xsl:text>
                               </link>
-                              <xsl:text>'s draft</xsl:text>
                            </item>
                         </xsl:for-each>
                      </list>
