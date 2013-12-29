@@ -31,6 +31,13 @@
       <uri>../../../expath-website/web-content/pages/</uri>
    </config-param>
 
+   <config-param id="web-files-dir">
+      <name>Web files directory</name>
+      <desc>The directory in the EXPath Web Files repository where to find the files for the
+         download area. See https://github.com/expath/web-files/.</desc>
+      <uri>../../../expath-website/web-files/files/</uri>
+   </config-param>
+
    <resource pattern="/style/.+.css"  media-type="text/css"/>
    <resource pattern="/js/.+.js"      media-type="text/javascript"/>
    <resource pattern="/images/.+.png" media-type="image/png"/>
