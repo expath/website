@@ -399,16 +399,24 @@
       <xsl:param name="diff"    as="xs:boolean"/>
       <xsl:param name="xml"     as="xs:boolean"/>
       <!-- TODO: Throw a proper application error is there is no matching element. -->
-      <xsl:variable name="info"     as="element(spec)" select="app:get-specs()[@name eq $spec]"/>
-      <xsl:variable name="revision" as="element()?"    select="
-         if ( $editor ) then
+      <xsl:variable name="info"     as="element(spec)?" select="app:get-specs()[@name eq $spec]"/>
+      <!-- TODO: If there is a $version tag, but there is no such version, $revision
+           will be empty.  Detect it and throw a proper 404.  This will be way easier
+           with a proper error handler for the application, so we an just throw a new
+           app:not-found error from here. -->
+      <xsl:variable name="revision" as="element()?"     select="
+         if ( empty($info) ) then
+           ()
+         else if ( $editor ) then
            $info/editor
          else if ( exists($version) ) then
            $info/revision[@version eq $version]
          else
            app:latest-spec($spec)"/>
-      <xsl:sequence select="
-         app:select-spec-file($revision, $diff, $xml)/resolve-uri(@href, base-uri(.))"/>
+      <xsl:if test="exists($revision)">
+         <xsl:sequence select="
+            app:select-spec-file($revision, $diff, $xml)/resolve-uri(@href, base-uri(.))"/>
+      </xsl:if>
    </xsl:function>
 
    <xsl:function name="app:latest-spec" as="element()?"> <!-- element(revision|editor)? -->
