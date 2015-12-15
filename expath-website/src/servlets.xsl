@@ -56,6 +56,11 @@
             </link>
             <xsl:text> for all versions.</xsl:text>
          </para>
+         <xsl:for-each select="desc">
+            <para>
+               <xsl:copy-of select="node()"/>
+            </para>
+         </xsl:for-each>
          <list>
             <xsl:for-each select="component">
                <item>
@@ -398,12 +403,7 @@
       <xsl:param name="version" as="xs:string?"/>
       <xsl:param name="diff"    as="xs:boolean"/>
       <xsl:param name="xml"     as="xs:boolean"/>
-      <!-- TODO: Throw a proper application error is there is no matching element. -->
       <xsl:variable name="info"     as="element(spec)?" select="app:get-specs()[@name eq $spec]"/>
-      <!-- TODO: If there is a $version tag, but there is no such version, $revision
-           will be empty.  Detect it and throw a proper 404.  This will be way easier
-           with a proper error handler for the application, so we an just throw a new
-           app:not-found error from here. -->
       <xsl:variable name="revision" as="element()?"     select="
          if ( empty($info) ) then
            ()
