@@ -124,111 +124,111 @@
       <item name="specs"     href="specs"     title="EXPath Specifications">Specs</item>
       <item name="resources" href="resources" title="EXPath Resources">Resources</item>
       <item name="map"       href="map"       title="EXPath Website Map">Map</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+      <item name="wiki"      href="http://w3.org/community/expath/wiki/" title="EXPath Wiki">Wiki</item>
       <item name="download"  href="files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="download">
-      <item name="nop"     href=".."           title="EXPath Home">Home</item>
-      <item name="news"    href="../news"      title="EXPath News">News</item>
-      <item name="faq"     href="../faq"       title="EXPath FAQ">FAQ</item>
-      <item name="lists"   href="../lists"     title="EXPath Mailing Lists">Lists</item>
-      <item name="modules" href="../modules"   title="EXPath Modules">Modules</item>
-      <item name="specs"   href="../specs"     title="EXPath Specifications">Specs</item>
-      <item name="index"   href="../resources" title="EXPath Resources">Resources</item>
-      <item name="map"     href="../map"       title="EXPath Website Map">Map</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+      <item name="nop"      href=".."           title="EXPath Home">Home</item>
+      <item name="news"     href="../news"      title="EXPath News">News</item>
+      <item name="faq"      href="../faq"       title="EXPath FAQ">FAQ</item>
+      <item name="lists"    href="../lists"     title="EXPath Mailing Lists">Lists</item>
+      <item name="modules"  href="../modules"   title="EXPath Modules">Modules</item>
+      <item name="specs"    href="../specs"     title="EXPath Specifications">Specs</item>
+      <item name="index"    href="../resources" title="EXPath Resources">Resources</item>
+      <item name="map"      href="../map"       title="EXPath Website Map">Map</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/" title="EXPath Wiki">Wiki</item>
       <item name="download" href="../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="oxygen">
-      <item name="nop"     href=".."           title="EXPath Home">Home</item>
-      <item name="news"    href="../news"      title="EXPath News">News</item>
-      <item name="faq"     href="../faq"       title="EXPath FAQ">FAQ</item>
-      <item name="lists"   href="../lists"     title="EXPath Mailing Lists">Lists</item>
-      <item name="modules" href="../modules"   title="EXPath Modules">Modules</item>
-      <item name="specs"   href="../specs"     title="EXPath Specifications">Specs</item>
-      <item name="index"   href="../resources" title="EXPath Resources">Resources</item>
-      <item name="map"     href="../map"       title="EXPath Website Map">Map</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/EXPath" title="EXPath Wiki">Wiki</item>
+      <item name="nop"      href=".."           title="EXPath Home">Home</item>
+      <item name="news"     href="../news"      title="EXPath News">News</item>
+      <item name="faq"      href="../faq"       title="EXPath FAQ">FAQ</item>
+      <item name="lists"    href="../lists"     title="EXPath Mailing Lists">Lists</item>
+      <item name="modules"  href="../modules"   title="EXPath Modules">Modules</item>
+      <item name="specs"    href="../specs"     title="EXPath Specifications">Specs</item>
+      <item name="index"    href="../resources" title="EXPath Resources">Resources</item>
+      <item name="map"      href="../map"       title="EXPath Website Map">Map</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/" title="EXPath Wiki">Wiki</item>
       <item name="download" href="../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="binary">
-      <item name="parent"  href="../../modules"     title="Modules">[ ../Modules ]</item>
-      <item name="index"   href="."                 title="EXPath Binary Home">Binary</item>
-      <item name="implems" href="implems"           title="EXPath Binary Implems">Implementations</item>
-      <item name="samples" href="samples"           title="EXPath Binary Samples">Samples</item>
-      <item name="spec"    href="../../spec/binary" title="EXPath Binary Spec">Specification</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/Binary" title="EXPath Binary Wiki">Wiki</item>
-      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
+      <item name="parent"   href="../../modules"     title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."                 title="EXPath Binary Home">Binary</item>
+      <item name="implems"  href="implems"           title="EXPath Binary Implems">Implementations</item>
+      <item name="samples"  href="samples"           title="EXPath Binary Samples">Samples</item>
+      <item name="spec"     href="../../spec/binary" title="EXPath Binary Spec">Specification</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/Modules#Binary" title="EXPath Binary Wiki">Wiki</item>
+      <item name="download" href="../../files"       title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="file">
-      <item name="parent"  href="../../modules"   title="Modules">[ ../Modules ]</item>
-      <item name="index"   href="."               title="EXPath File Home">File</item>
-      <item name="implems" href="implems"         title="EXPath File Implems">Implementations</item>
-      <item name="samples" href="samples"         title="EXPath File Samples">Samples</item>
-      <item name="spec"    href="../../spec/file" title="EXPath File Spec">Specification</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/File" title="EXPath Wiki">Wiki</item>
+      <item name="parent"   href="../../modules"   title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."               title="EXPath File Home">File</item>
+      <item name="implems"  href="implems"         title="EXPath File Implems">Implementations</item>
+      <item name="samples"  href="samples"         title="EXPath File Samples">Samples</item>
+      <item name="spec"     href="../../spec/file" title="EXPath File Spec">Specification</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/Modules#File" title="EXPath File Wiki">Wiki</item>
       <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="geo">
-      <item name="parent"  href="../../modules"  title="Modules">[ ../Modules ]</item>
-      <item name="index"   href="."              title="EXPath Geo Home">Geo</item>
-      <item name="implems" href="implems"        title="EXPath Geo Implems">Implementations</item>
-      <!--item name="samples" href="samples"        title="EXPath Geo Samples">Samples</item-->
-      <item name="spec"    href="../../spec/geo" title="EXPath Geo Spec">Specification</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/Geo" title="EXPath Wiki">Wiki</item>
-      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
+      <item name="parent"   href="../../modules"  title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."              title="EXPath Geo Home">Geo</item>
+      <item name="implems"  href="implems"        title="EXPath Geo Implems">Implementations</item>
+      <!--item name="samples" href="samples"      title="EXPath Geo Samples">Samples</item-->
+      <item name="spec"     href="../../spec/geo" title="EXPath Geo Spec">Specification</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/Geo_Module" title="EXPath Geo Wiki">Wiki</item>
+      <item name="download" href="../../files"    title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="hc">
-      <item name="parent"  href="../../modules"          title="Modules">[ ../Modules ]</item>
-      <item name="index"   href="."                      title="EXPath HTTP Client Home">HTTP Client</item>
-      <item name="implems" href="implems"                title="EXPath HTTP Client Implems">Implementations</item>
-      <item name="samples" href="samples"                title="EXPath HTTP Client Samples">Samples</item>
-      <item name="spec"    href="../../spec/http-client" title="EXPath HTTP Client Spec">Specification</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/HttpClient" title="EXPath Wiki">Wiki</item>
-      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
+      <item name="parent"   href="../../modules"          title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."                      title="EXPath HTTP Client Home">HTTP Client</item>
+      <item name="implems"  href="implems"                title="EXPath HTTP Client Implems">Implementations</item>
+      <item name="samples"  href="samples"                title="EXPath HTTP Client Samples">Samples</item>
+      <item name="spec"     href="../../spec/http-client" title="EXPath HTTP Client Spec">Specification</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/HTTP_Client_Module" title="EXPath HTTP Client Wiki">Wiki</item>
+      <item name="download" href="../../files"            title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="pkg">
-      <item name="parent"  href="../../modules"        title="Modules">[ ../Modules ]</item>
-      <item name="index"   href="."                    title="EXPath Packaging Home">Packaging</item>
-      <item name="implems" href="implems"              title="EXPath Packaging Implems">Implementations</item>
-      <item name="spec"    href="../../spec/pkg"       title="EXPath Packaging Spec">Specification</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/Packaging" title="EXPath Wiki">Wiki</item>
-      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
+      <item name="parent"   href="../../modules"  title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."              title="EXPath Packaging Home">Packaging</item>
+      <item name="implems"  href="implems"        title="EXPath Packaging Implems">Implementations</item>
+      <item name="spec"     href="../../spec/pkg" title="EXPath Packaging Spec">Specification</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/Packaging_Module" title="EXPath Packaging Wiki">Wiki</item>
+      <item name="download" href="../../files"    title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="webapp">
-      <item name="parent"  href="../../modules"     title="Modules">[ ../Modules ]</item>
-      <item name="index"   href="."                 title="EXPath Webapp Home">Webapp</item>
-      <item name="implems" href="implems"           title="EXPath Webapp Implems">Implementations</item>
-      <item name="samples" href="samples"           title="EXPath Webapp Samples">Samples</item>
-      <item name="spec"    href="../../spec/webapp" title="EXPath Webapp Spec">Specification</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/Webapp" title="EXPath Wiki">Wiki</item>
-      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
+      <item name="parent"   href="../../modules"     title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."                 title="EXPath Webapp Home">Webapp</item>
+      <item name="implems"  href="implems"           title="EXPath Webapp Implems">Implementations</item>
+      <item name="samples"  href="samples"           title="EXPath Webapp Samples">Samples</item>
+      <item name="spec"     href="../../spec/webapp" title="EXPath Webapp Spec">Specification</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/Webapp_Module" title="EXPath Webapp Wiki">Wiki</item>
+      <item name="download" href="../../files"       title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="xproj">
-      <item name="parent" href="../../modules"       title="Modules">[ ../Modules ]</item>
-      <item name="index"  href="."                   title="XProject Home">XProject</item>
-      <item name="oxygen" href="oxygen"              title="XProject plugin for oXygen">oXygen Plugin</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/XProject" title="EXPath Wiki">Wiki</item>
-      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
+      <item name="parent"   href="../../modules" title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."             title="XProject Home">XProject</item>
+      <item name="oxygen"   href="oxygen"        title="XProject plugin for oXygen">oXygen Plugin</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/" title="EXPath Wiki">Wiki</item>
+      <item name="download" href="../../files"   title="EXPath Downloads">Download</item>
    </menu>
 
    <menu name="zip">
-      <item name="parent"  href="../../modules"  title="Modules">[ ../Modules ]</item>
-      <item name="index"   href="."              title="EXPath ZIP Home">ZIP</item>
-      <item name="implems" href="implems"        title="EXPath ZIP Implems">Implementations</item>
-      <item name="samples" href="samples"        title="EXPath ZIP Samples">Samples</item>
-      <item name="spec"    href="../../spec/zip" title="EXPath ZIP Spec">Specification</item>
-      <item name="wiki" href="http://wiki.expath.org/wiki/Zip" title="EXPath Wiki">Wiki</item>
-      <item name="download" href="../../files"     title="EXPath Downloads">Download</item>
+      <item name="parent"   href="../../modules"  title="Modules">[ ../Modules ]</item>
+      <item name="index"    href="."              title="EXPath ZIP Home">ZIP</item>
+      <item name="implems"  href="implems"        title="EXPath ZIP Implems">Implementations</item>
+      <item name="samples"  href="samples"        title="EXPath ZIP Samples">Samples</item>
+      <item name="spec"     href="../../spec/zip" title="EXPath ZIP Spec">Specification</item>
+      <item name="wiki"     href="http://w3.org/community/expath/wiki/ZIP_Module" title="EXPath ZIP Wiki">Wiki</item>
+      <item name="download" href="../../files"    title="EXPath Downloads">Download</item>
    </menu>
 
 </sitemap>
